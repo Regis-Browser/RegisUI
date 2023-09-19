@@ -1,12 +1,3 @@
-<div id="header" align="center">
- <kbd>
-<img src="https://raw.githubusercontent.com/kikipoulet/SukiUI/main/Images/suki_photo.jpg" width="200" height="200"></img> 
-  </kbd>
-<br/>
-Suki is the name of my dog :-)
-</div>
-<br/>
-
 # ✨ SukiUI
 
 ### UI Theme, Desktop and Mobile Controls for AvaloniaUI ! <img src="https://www.avaloniaui.net/img/logo/avalonia-white-purple.svg"></img>
