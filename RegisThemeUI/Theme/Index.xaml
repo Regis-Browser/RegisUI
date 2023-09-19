@@ -1,0 +1,53 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
+
+    <SimpleTheme />
+
+    <StyleInclude Source="avares://RegisThemeUI/ColorTheme/Light.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ComboBoxStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/Colors.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/TextBlockStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ButtonStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/TextBoxStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/RichTextBoxStyles.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/BorderStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/TabControlStyles.xaml" />
+
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ProgressBarStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ListBoxStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/TreeViewStyles.xaml" />
+
+    <StyleInclude Source="avares://RegisThemeUI/Theme/MenuStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ToggleSwitchStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/RadioButtonStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ToggleButtonStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/SliderStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/NumericUpDownStyles.xaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/DataGridStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ListBoxItemStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ComboBoxItemStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/MenuItemStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/TabItemStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/NotificationStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/NotificationCardStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ContextMenuStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/WindowStyles.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/CheckBox.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ScrollBarStyle.axaml" />
+    <StyleInclude Source="avares://RegisThemeUI/Theme/ExpanderStyles.xaml" />
+    
+    <avalonia:MaterialIconStyles />
+    
+    <Styles.Resources>
+        <ResourceDictionary>
+            <CornerRadius x:Key="SmallCornerRadius">6</CornerRadius>
+            <CornerRadius x:Key="MediumCornerRadius">13</CornerRadius>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="avares://RegisThemeUI/Theme/SplitView.axaml" />
+                <ResourceInclude Source="avares://RegisThemeUI/Theme/DatePicker.axaml" />
+
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+</Styles>

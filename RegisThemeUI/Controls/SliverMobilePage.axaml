@@ -1,0 +1,57 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="RegisThemeUI.Controls.SliverMobilePage"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:regis_theme="clr-namespace:RegisThemeUI.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="regis_theme|SliverMobilePage">
+            <Setter Property="Template">
+                <ControlTemplate>
+
+                    <Grid>
+                        <Grid.Resources>
+                            <regis_theme:OffsetToHeightConverter x:Key="HeightConverter" />
+                            <regis_theme:OffsetToFontSizeConverter x:Key="FontSizeConverter" />
+                            <regis_theme:OffsetToMarginConverter x:Key="MarginConverter" />
+                            <regis_theme:OffsetToMarginScrollConverter x:Key="MarginScrollConverter" />
+                        </Grid.Resources>
+                        <Border
+                            Background="Transparent"
+                            BorderBrush="{DynamicResource RegisThemeBorderBrush}"
+                            BorderThickness="0,0,0,0"
+                            Height="{Binding #scrollView.Offset, Converter={StaticResource HeightConverter}}"
+                            VerticalAlignment="Top">
+
+                            <Grid Margin="{Binding #scrollView.Offset, Converter={StaticResource MarginConverter}}">
+                                <TextBlock
+                                    Classes="h1"
+                                    FontSize="{Binding #scrollView.Offset, Converter={StaticResource FontSizeConverter}}"
+                                    FontWeight="DemiBold"
+                                    HorizontalAlignment="Left"
+                                    Margin="0,0,0,0"
+                                    Text="{TemplateBinding Header}"
+                                    VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <ScrollViewer 
+                            IsScrollInertiaEnabled="True"
+                            Margin="0,100,0,0"
+                            Name="scrollView"
+                            VerticalScrollBarVisibility="Hidden">
+                            <StackPanel>
+                                <Grid Height="70" />
+                                <ContentControl Content="{TemplateBinding Content}" />
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>

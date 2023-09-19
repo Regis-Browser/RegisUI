@@ -1,0 +1,140 @@
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="RegisThemeUI.Controls.DesktopPage"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    
+    xmlns:material="using:Material.Icons.Avalonia"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:regis_theme="clr-namespace:RegisThemeUI.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="regis_theme|DesktopPage">
+            <Setter Property="Template">
+                <ControlTemplate>
+
+
+                    <DockPanel>
+
+                        <Border Name="BottomBorder"
+                            BorderBrush="{DynamicResource RegisThemeBorderBrush}"
+                            DockPanel.Dock="Top">
+                            <Grid>
+                                <Grid
+                                    Background="Transparent"
+                                    ColumnDefinitions="Auto,*,Auto"
+                                    IsHitTestVisible="False"
+                                    RowDefinitions="Auto,Auto">
+                                    <material:MaterialIcon
+                                        Foreground="{TemplateBinding LogoColor}"
+                                        Grid.Column="0"
+                                        Height="25"
+                                        HorizontalAlignment="Left"
+                                        IsHitTestVisible="False"
+                                        Kind="{TemplateBinding LogoKind}"
+                                        Margin="10"
+                                        Width="25" />
+                                    <TextBlock
+                                        FontSize="{TemplateBinding TitleFontSize}"
+                                        FontWeight="{TemplateBinding TitleFontWeight}"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="{TemplateBinding TitleHorizontalAlignment}"
+                                        IsHitTestVisible="False"
+                                        Text="{TemplateBinding Title}"
+                                        VerticalAlignment="Center" />
+                                    <Menu
+                                        Grid.ColumnSpan="3"
+                                        Grid.Row="1"
+                                        IsHitTestVisible="True"
+                                        IsVisible="{TemplateBinding MenuVisibility}"
+                                        
+                                        ItemsSource="{TemplateBinding MenuItems}"
+                                        Margin="0,-5,0,0" />
+
+
+                                </Grid>
+                                <DockPanel
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Right"
+                                    Margin="0,0,5,0">
+
+                                    <!--  Minimize button  -->
+                                    <Button
+                                        Background="Transparent"
+                                        Cursor="Hand"
+                                        BorderThickness="0"
+                                        Classes="Accent"
+                                        Click="MinimizeHandler"
+                                        Height="23"
+                                        IsVisible="{TemplateBinding IsMinimizeButtonEnabled}"
+                                        Width="23">
+                                        <material:MaterialIcon
+                                            Height="14"
+                                            Kind="WindowMinimize"
+                                            Width="14" />
+                                    </Button>
+                                    <!--  Maximize button  -->
+                                    <Button
+                                        Background="Transparent"
+                                        Cursor="Hand"
+                                        BorderThickness="0"
+                                        Classes="Accent"
+                                        Click="MaximizeHandler"
+                                        Height="23"
+                                        IsVisible="{TemplateBinding IsMaximizeButtonEnabled}"
+                                        Width="23">
+                                        <material:MaterialIcon
+                                            Height="14"
+                                            x:Name="MaximizeMaterialIcon"
+                                            Classes="WindowMaximize"
+                                            Width="14" />
+                                    </Button>
+                                    
+                                    <!--  Close button  -->
+                                    <Button
+                                        Background="Transparent"
+                                        Cursor="Hand"
+                                        BorderThickness="0"
+                                        Classes="Accent"
+                                        Click="CloseHandler"
+                                        Height="23"
+                                        IsHitTestVisible="True"
+                                        Padding="0"
+                                        Width="25">
+                                        <material:MaterialIcon
+                                            Height="18"
+                                            Kind="WindowClose"
+                                            Width="18" />
+
+                                    </Button>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+
+                        <ContentControl Content="{TemplateBinding Content}" />
+
+                    </DockPanel>
+
+
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        
+        <Style Selector="material|MaterialIcon.WindowMaximize">
+            <Setter Property="Kind" Value="WindowMaximize"></Setter>
+        </Style>
+        <Style Selector="material|MaterialIcon.WindowRestore">
+            <Setter Property="Kind" Value="WindowRestore"></Setter>
+        </Style>
+
+        <Style Selector="regis_theme|DesktopPage /template/ Border#BottomBorder" >
+            <Setter Property="BorderThickness" Value="0,0,0,1"></Setter>
+        </Style>
+        <Style Selector="regis_theme|DesktopPage[ShowBottomBorder=False] /template/ Border#BottomBorder" >
+            <Setter Property="BorderThickness" Value="0,0,0,0"></Setter>
+        </Style>
+
+    </UserControl.Styles>
+</UserControl>

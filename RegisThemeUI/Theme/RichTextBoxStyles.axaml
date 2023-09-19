@@ -1,0 +1,17 @@
+﻿<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:regis_theme="clr-namespace:RegisThemeUI.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Background="{DynamicResource RegisThemeBackground}" Padding="20">
+            <StackPanel>
+
+                <regis_theme:RichTextBox Prefix="Test :" Text="test" />
+
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+
+
+</Styles>

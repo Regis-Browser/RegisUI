@@ -1,0 +1,28 @@
+﻿<Style
+    x:Class="RegisThemeUI.Dark"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style.Resources>
+
+        <Color x:Key="RegisThemePrimaryColorGradient">#2f54eb</Color>
+        <Color x:Key="RegisThemePrimaryColor">#597ef7</Color>
+
+        <Color x:Key="RegisThemeBackground">#252525</Color>
+        <Color x:Key="RegisThemeLightBackground">#303030</Color>
+        <Color x:Key="RegisThemeLightColoredBackground">#303030</Color>
+        <Color x:Key="RegisThemeStrongBackground">#353535</Color>
+        <Color x:Key="RegisThemeControlTouchBackground">#505050</Color>
+        <Color x:Key="RegisThemeText">#dbdbdb</Color>
+        <Color x:Key="RegisThemeLowText">#b5b5b5</Color>
+        <Color x:Key="RegisThemeBorderBrush">#353535</Color>
+        <Color x:Key="RegisThemeControlBorderBrush">#606060</Color>
+        <Color x:Key="RegisThemeMediumBorderBrush">#555555</Color>
+        <Color x:Key="RegisThemeLightBorderBrush">#454545</Color>
+        <Color x:Key="RegisThemeDialogBackground">#505050</Color>
+
+        <BoxShadows x:Key="RegisThemeLowShadow">0 0 3 0 #353535</BoxShadows>
+        <BoxShadows x:Key="RegisThemeSwitchShadow">0 1 5 0 #555555</BoxShadows>
+        <BoxShadows x:Key="RegisThemePopupShadow">1 1 5 0 #404040</BoxShadows>
+    </Style.Resources>
+</Style>
